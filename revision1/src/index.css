@@ -1,68 +1,100 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+padding:0px;
+margin:0px;
+box-sizing:border-box;
+font-family:'Poppins';
+color:white;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+html,
+body{
+width:100%;
+min-height:100vh;
+background-color:#222;
 }
 
-body {
-  margin: 0;
+#root{
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card{
+  width: 350px;
+  height: 380px;
+  border:2px solid rgb(36, 36, 36);
+  border-radius: 30px;
+  position: relative;
+  margin:10px;
+  padding:10px;
+  box-shadow: 0px 5px 30px rgb(0, 0, 0);
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.top{
+  height: max-content;
+  width: 100%;
+  color:black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:10px;
 }
 
-button {
+.save-icon{
+  display: flex;
+  align-items: center;
+}
+.save-icon span{
+  font-size: 13px;
+  margin:0 5px;
+}
+
+.img{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.center{
+  height: calc(100% - 60%);
+  width: 100%;
+  padding:10px 10px;
+
+}
+.center h4 span{
+  font-size: 1px;
+  opacity: 0.3;
+}
+.center h3{
+  margin-bottom: 5px;
+}
+
+.center div span{
+  margin-left: 10px;
+  font-size: 8px;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.bottom{
+  display: flex;
+  justify-content: space-between;
+  padding:10px;
+}
+.bottom div h6{
+  font-size: 1px;
+  opacity: 0.4;
+}
+.btn{
+  padding:7px 25px;
+  color:white;
+  background-color: rgba(17, 17, 17, 0.802);
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  border: none;
+  margin:10px 0;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
 }

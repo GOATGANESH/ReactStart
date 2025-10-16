@@ -1,0 +1,57 @@
+REACT
+	Import/Export
+		- export default varname/functionname
+		- export varname ( need {} to import)
+		- import component name from path
+
+	-fragmentation
+		-<></> use to pass empty container to root
+	
+	-props
+		- passing arguments to function 
+		- function accepts arguments in form of objects
+		- {} is necessary to use
+	- Inline style 
+		- use style={{property:'value'}}
+
+	- module css 
+		- make separate css for each component 
+		- import styles from 'header.module.css'
+		- use => style={styles.className}
+
+	-function calling
+		- < div onClick={functionname only (no brackets, brackets means call the function)} >
+		- or <div onClicke={function (event){ 
+				//functionname(event)
+				//code
+			}}
+
+	-Hooks 
+		- Inbuilt functions used to make code reliable,high performance,optimize
+		-useState,useEffect,useRef,useContext,useMemo,useCallBack,useReducer
+
+	i)useState
+		- changes state of variable in UI 
+		- const[varName,setVarValue]=useState(initialValue)
+		- setVarValue() works asynchronously
+		- to work with array or object using state
+			- const[arr,setArr]=useState([9,1,2,3])
+			- i) destructuring => newArr=[...arr] then setArr(newArr)
+			- ii)arrow function => setArr([...arr,newVal])
+			- const[obj,setObj]= useState({name:'ganu',age:20})
+			- destructuring => newObj={...obj} then setObj(newObj)
+			- arrow function => setObj(prev=>({...prev,name:'mau'})
+		- batch update
+			- when multiple setter functions call it works asyncly and therefore
+			  delay in value updation so we do this
+			- setValue(prev=>(prev+1)) // ensures latest value
+		-Two way binding
+			- specially on input ,instead of interacting with input field 
+			  directly we use react to manage input field 
+			- value={title} , onChange={()=>{setTitle(e.target.value)}}
+
+
+	ii)
+	
+	
+					
