@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+*{
+padding:0px;
+margin:0px;
+box-sizing:border-box;
+font-family:'Poppins';
+color:white;
+}
+
+html,body{
+width:100%;
+min-height:100vh;
+background-color:#222;
+}
+
+.app-container{
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+/* --------NAVBAR--------------- */
+.navbar{
+  /* background-color: red; */
+  width: 100%;
+  display: flex;
+  padding: 20px ;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid white;
+
+}
+.navbar h1{
+  font-family: 'Caveat';
+  font-size: 2.5rem;
+}
+.navbar-search-watchlist-container{
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.searchfield{
+  display: flex;
+  align-items: center;
+  column-gap:5px;
+}
+
+.searchfield input{
+  background-color: #222;
+  padding:5px 20px;
+  outline:none;
+  border:1px solid white;
+  border-radius: 3px;
+  width:300px;
+  font-size: 15px;
+}
+.searchfield button{
+  background-color: #222;
+  padding: 5px;
+  border-radius: 50%;
+  /* border:1px solid rgba(255, 255, 255, 0.067); */
+  border:none;
+  outline: none;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  
+}
+
+.searchfield button:active{
+  scale:95%;
+}
+
+.watchlist{
+  border:1px solid white;
+  padding:2px 6px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+}
+.watchlist h4{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 100;
+}
+.watchlist:active{
+  scale: 97%;
+  background-color: #000000;
+}
+
+/* ---------CONTAINER--------------- */
+
+.parent-container{
+  height: 88vh;
+  width: 100%;
+  border:2px solid white;
+  padding:0px 10px;
+  display: flex;
+  /* justify-content: center; */
+  /* flex-wrap: wrap; */
+  gap:20px;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: auto;
+  /* flex-shrink:0; */
+} 
+.animeContainer,.movieContainer{
+  display: flex;
+  row-gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+}
+#see-more{
+  /* height: fit-content;
+   */
+   height: 55px;
+  padding:5px 20px;
+  border-radius: 10px;
+  border:1px solid white;
+  background-color: transparent;
+  width: fit-content;
+  cursor: pointer;
+  display:flex;
+  align-items: center;
+  color:white;
+}
+#see-more:hover{
+  background-color: #201f1f;
+  text-decoration: underline;
+  color:blue;
+}
+
+
+.animeContainer,.movieContainer h1{
+  margin: 0;
+  padding: 0;
+}
+.container{
+  display:flex;
+  gap:20px;
+  /* align-items: center; */
+}
+
+.container.not-active{
+  display: none;
+}
+.container.active{
+  flex-wrap: wrap;
+  height: 90vh;
+}
+
+.card{
+  width: 150px;
+  min-width:150px;
+  height: 270px;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+.card .poster{
+  height: 80%;
+  overflow: hidden;
+  /* padding:10px;   */
+  border-bottom: 1px solid white;
+}
+.card .info{
+  height: 20%;
+  text-align: center;
+  font-size: 10px;
+}
+
+.poster-image{
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+  object-position:center;
+}

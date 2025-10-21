@@ -1,0 +1,27 @@
+@media screen and (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    border: none;
+  }
+  .navbar h1 {
+    border-bottom: 1px solid white;
+    margin-bottom: 40px;
+    padding: 10px;
+    font-size: 1.8rem;
+  }
+  .searchfield input {
+    width: 250px;
+  }
+  .watchlist {
+    border: none;
+  }
+
+  #watchlist-title {
+    display: none;
+  }
+ 
+  .card {
+    width: 160px;
+    height: 250px;
+  }
+}
